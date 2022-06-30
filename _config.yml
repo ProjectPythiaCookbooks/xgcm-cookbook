@@ -7,9 +7,12 @@ logo: notebooks/images/logos/pythia_logo-white-rtext.svg
 email: projectpythia@ucar.edu
 copyright: '2022'
 
-# Don't execute the notebooks upon building the book
+# Execute the notebooks upon building the book?
+# See https://jupyterbook.org/en/stable/content/execute.html
 execute:
-  execute_notebooks: "off"
+  execute_notebooks: cache
+  timeout: 600
+  allow_errors: True
 
 # Add a few extensions to help with parsing content
 parse:
@@ -57,7 +60,7 @@ sphinx:
         - name: Foundations
           url: https://foundations.projectpythia.org
         - name: Cookbooks
-          url: projectpythiatutorials.github.io
+          url: https://cookbooks.projectpythia.org
         - name: Resources
           url: https://projectpythia.org/resource-gallery.html
         - name: Community
